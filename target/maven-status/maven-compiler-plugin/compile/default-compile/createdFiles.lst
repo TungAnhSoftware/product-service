@@ -1,0 +1,12 @@
+com/ecom/productservice/model/SmartPhoneModel.class
+com/ecom/productservice/ProductServiceApplication.class
+com/ecom/productservice/dto/SmartPhoneResp$SmartPhoneRespBuilder.class
+com/ecom/productservice/mappers/SmartPhoneMapper.class
+com/ecom/productservice/exception/SmartPhoneException.class
+com/ecom/productservice/controller/ProductController.class
+com/ecom/productservice/mappers/SmartPhoneMapperImpl.class
+com/ecom/productservice/dto/SmartPhoneResp.class
+com/ecom/productservice/service/ProductService.class
+com/ecom/productservice/dto/SmartPhoneReq$SmartPhoneReqBuilder.class
+com/ecom/productservice/dto/SmartPhoneReq.class
+com/ecom/productservice/repository/ProductRepository.class
