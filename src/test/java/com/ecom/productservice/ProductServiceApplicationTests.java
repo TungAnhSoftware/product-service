@@ -30,16 +30,16 @@ public class ProductServiceApplicationTests extends AbstractContainerBaseTest {
 
     @Test
     public void createProductTest() throws Exception {
-        ProductRequest req = getSmartPhoneReq();
+        ProductRequest req = getProductRequest();
         String reqString = objectMapper.writeValueAsString(req);
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/product/createSmartPhone")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/product/createProduct")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(reqString))
                 .andExpect(status().isCreated());
         Assertions.assertEquals(1, productRepository.findAll().size());
     }
 
-    private ProductRequest getSmartPhoneReq() {
+    private ProductRequest getProductRequest() {
         return ProductRequest.builder()
                 .name("iPhone 13")
                 .price(BigDecimal.valueOf(1200))

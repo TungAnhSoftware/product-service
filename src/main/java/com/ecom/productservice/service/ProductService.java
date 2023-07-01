@@ -22,7 +22,7 @@ public class ProductService {
 
     private final ProductMapper productMapper;
 
-    public List<ProductResponse> getAllSmartphones() {
+    public List<ProductResponse> getAllProduct() {
         List<Product> products = productRepository.findAll();
         return products.stream().map(productMapper::ModelToResp).toList();
     }

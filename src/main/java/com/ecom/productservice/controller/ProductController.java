@@ -22,7 +22,7 @@ public class ProductController {
     @GetMapping(path = "/allProduct")
     public List<ProductResponse> getAllProduct() {
         logger.info("Received Request getAllProduct");
-        return productService.getAllSmartphones();
+        return productService.getAllProduct();
     }
 
     @PostMapping(path = "/createProduct")
