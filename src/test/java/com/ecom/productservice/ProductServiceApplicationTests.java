@@ -1,6 +1,6 @@
 package com.ecom.productservice;
 
-import com.ecom.productservice.dto.SmartPhoneReq;
+import com.ecom.productservice.dto.ProductRequest;
 import com.ecom.productservice.repository.ProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
@@ -30,7 +30,7 @@ public class ProductServiceApplicationTests extends AbstractContainerBaseTest {
 
     @Test
     public void createProductTest() throws Exception {
-        SmartPhoneReq req = getSmartPhoneReq();
+        ProductRequest req = getSmartPhoneReq();
         String reqString = objectMapper.writeValueAsString(req);
         mockMvc.perform(MockMvcRequestBuilders.post("/api/product/createSmartPhone")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -39,8 +39,8 @@ public class ProductServiceApplicationTests extends AbstractContainerBaseTest {
         Assertions.assertEquals(1, productRepository.findAll().size());
     }
 
-    private SmartPhoneReq getSmartPhoneReq() {
-        return SmartPhoneReq.builder()
+    private ProductRequest getSmartPhoneReq() {
+        return ProductRequest.builder()
                 .name("iPhone 13")
                 .price(BigDecimal.valueOf(1200))
                 .build();

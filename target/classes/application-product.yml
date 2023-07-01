@@ -1,5 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://ecommercedb.c3kv7dw0tj0j.ap-southeast-1.rds.amazonaws.com:3306/ProductService
-    username: admin
-    password: 12345678
