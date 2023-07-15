@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -16,8 +17,12 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String name;
     private BigDecimal price;
+    private String imageUrl;
+    private String color;
+    private BigDecimal quantity;
+    private int productType;
 }

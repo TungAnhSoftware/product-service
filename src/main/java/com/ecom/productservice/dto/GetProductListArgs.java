@@ -6,17 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductResponse {
-    private String id;
-    private String name;
-    private BigDecimal price;
-    private String imageUrl;
-    private String color;
-    private BigDecimal quantity;
+public class GetProductListArgs {
+    private int page;
+    private int size;
+    private float createdAt;
     private int productType;
+    private String keyword;
 }
